@@ -516,7 +516,7 @@ footer > div span:last-child{
         width: 100%;
     }
     .contentLoc > h1 {
-        font-size: 10vh;
+        font-size: 6vh;
     }
     .opp > div:nth-child(1){
         flex-direction: column;
