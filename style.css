@@ -1,0 +1,547 @@
+@font-face {
+    font-family: 'Allison';
+    src: url('./recursos/Allison-Regular.ttf') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+  }
+@font-face {
+    font-family: 'Rufina';
+    src: url('./recursos/Rufina-Regular.ttf') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.weight {
+    font-weight: bold;
+}
+.maxWidth {
+    max-width: 1300px;
+    padding: 0 70px;
+    margin: auto;
+}
+.text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.zoom:hover {
+    transition: 1s;
+    transform: scale(1.1);
+}
+.zoom:not(:hover) {
+    transition: 1s;
+    transform: scale(1);
+}
+.contContact {
+    width: 100%;
+    background: #ffffff;
+    display: block;
+    align-items: center;
+}
+.flexCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.flexCont > div:nth-child(1) {
+    padding: 20vh 5vh;
+}
+.flexCont > div:nth-child(2) {
+    padding: 20vh 5vh 20vh 0;
+}
+/* navbar style */
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    padding: 30px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    z-index: 9999;
+}
+.navbar .maxWidth{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .contLogo {
+    height: 5vh;
+    filter: grayscale(100%);
+}
+.navbar .contLogo img{
+    height: 90%;
+}
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.navbar .menu li a:hover{
+    color: #666666;
+    text-decoration: underline;
+}
+
+/* btn menu styling */
+
+.btnMenu {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* banner carrousel */
+.slideshow-principal{
+    height: 100vh;
+    position: relative;
+}
+.carousel {
+    height: 100%;
+}
+.carousel-inner {
+    height: 100%;
+}
+.carousel-item {
+    height: 100%;
+}
+.carousel-item > img {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+.logoBanner {
+    position: absolute;
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoBanner > img{
+    height: 65%;
+    margin-top: 13vh;
+}
+
+/* content intro */
+.contPubli {
+    width: 100%;
+    height: 35vh;
+}
+.publi {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.publi > h1 {
+    font-weight: bold;
+}
+.publi > h5 {
+    color: #666666;
+    
+}
+
+.max-width{
+    max-width: 1300px;
+    height: 100%;
+    padding: 0 80px;
+    margin: auto;
+}
+.contCart {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./recursos/fondo_madera_gris.jpg');
+    background-size: 100% 100%;
+}
+.contCart .serv-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.contCart, .teams{
+    color:#fff;
+    /* background: #111; */
+}
+.proyects{
+    color:#000000;
+    background: #ffffff;
+}
+.contCart .title::before{
+    background: #fff;
+}
+
+.proyects .title::after{
+    background: #ffffff;
+    content: "I have done";
+}
+.card {
+    margin: 15vh 0;
+}
+.contCart .serv-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    color:#fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contCart .serv-content .card:hover{
+    background: #666666;
+}
+.contCart .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.contCart .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.contCart .serv-content .card i{
+    font-size: 50px;
+    color: #8c8c8c;
+    transition: color 0.3s ease;
+}
+.contCart .serv-content .card:hover i{
+    color: #fff;
+}
+.contCart .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* About container */
+
+.contAbout {
+    width: 100%;
+    background: #fff;
+}
+.contentAbout {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20vh 0;
+}
+.contAbout h1 {
+    padding: 5vh;
+}
+.contAbout p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Cont location */
+.contentLoc {
+    width: 40%;
+    padding: 10vh;
+}
+.responsiCont {
+    display: flex;
+    flex-direction: row;
+}
+.contentLoc > h1 {
+    font-family: "Allison", Sans-serif;
+}
+.contentLoc > h1 {
+    font-size: 14vh;
+}
+.contentLoc > p {
+    font-size: 2vh;
+    font-weight: bold;
+    padding: 5vh 0;
+}
+.locPicture {
+    width: 58%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0vh;
+}
+.contPicture {
+    width: 40vw;
+}
+.contPicture > img {
+    width: 100%;
+}
+
+/* Contanier Review */
+.contReview {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: none;
+}
+.contLogoRev {
+    height: 20vh;
+    margin: 5vh;
+}
+.contLogoRev > img {
+    height: 100%;
+    /* -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    filter: invert(100%); */
+}
+.contOpp {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+.opp {
+    width: 45vw;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    padding: 30px 40px;
+}
+.opp > div:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.opp > div:nth-child(2){
+    font-size: 11vh;
+    color: #222;
+    font-family: 'Rufina';
+}
+.opp > div:nth-child(3){
+    font-size: 25px;
+    font-style: italic;
+    color: #222;
+    font-family: 'Rufina';
+}
+.star {
+    color: rgb(255, 187, 0);
+}
+
+/* Container info */
+.contInfo {
+    background: #131313;
+    color: #fff;
+    padding: 0 1vw;
+}
+.contInfo > div {
+    display: flex;
+    flex-direction: row;
+    padding: 20vh 0;
+    justify-content: space-between;
+}
+.contInfo > div > div {
+    padding: 0 1vw;
+    display: flex;
+    flex-direction: column;
+}
+.contSocial > i {
+    padding: 0 2vw;
+    transition: 1s;
+}
+.contSocial > i:nth-child(1):hover {
+    color: #0866ff;
+}
+.contSocial > i:nth-child(2):hover {
+    font-size:30px;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.contInfo h5 {
+    color: #8c8c8c;
+    padding: 2vh 0;
+}
+
+/* footer section styling */
+footer{
+    background: #1a1a1a;
+    padding: 30px 23px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer > div span:first-child{
+    color: rgb(73, 73, 73);
+}
+footer > div span:last-child{
+    color: crimson;
+}
+
+
+/* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./recursos/fondo_madera_gris.jpg');
+  background-size: 100% 100%; */
+
+@media (max-width: 1065px){
+    
+    .cards_item {
+        margin: 0vh 0vh;
+    }
+
+    .btnMenu{
+        display: block;
+        z-index: 999;
+    }
+    .btnMenu i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+        color: #fff;
+    }
+
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .max-width{
+        padding: 0 50px;
+    }
+
+    .contCart .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .card {
+        margin: 5vh 0;
+    }
+    .contentAbout {
+        padding: 10vh 0;
+    }
+    .responsiCont {
+        display: flex;
+        flex-direction: column;
+    }
+    .contentLoc {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contentLoc > h1 {
+        font-family: "Allison", Sans-serif;
+    }
+    .contentLoc > h1 {
+        font-size: 14vh;
+    }
+    .contentLoc > p {
+        font-size: 2vh;
+        font-weight: bold;
+        padding: 5vh 0;
+    }
+    .locPicture {
+        width: 100%;
+        padding-bottom: 8vh;
+    }
+    .contPicture {
+        width: 70vw;
+    }
+    .contOpp {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .opp { 
+        width: 70%;
+    }
+
+    .contInfo > div {
+        flex-direction: column;
+    }
+
+    .contInfo > div > div {
+        text-align: center;
+    }
+    .contInfo > div {
+        padding: 10vh 0;
+    }
+    .contInfo > div > div{
+        padding: 5vh 0;
+    }
+}
+
+@media (max-width: 608px) {
+    .logoBanner > img{
+        height: auto;
+        width: 75%;
+    }
+    .contCart .serv-content .card{
+        width: 100%;
+    }
+    .contentLoc > h1 {
+        font-size: 10vh;
+    }
+    .opp > div:nth-child(1){
+        flex-direction: column;
+    }
+    .contentAbout {
+        padding: 5vh 0;
+    }
+    .contPicture {
+        width: 80vw;
+    }
+    .opp { 
+        width: 99%;
+    }
+}
+
+
+/* .txtprueva {
+    background: linear-gradient(to right, rgba(0, 168, 253), #fff 35%, #e00a95);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s linear infinite;
+}
+@keyframes gradient {
+    0% {background-position: 0% 75%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 75%;}
+} */

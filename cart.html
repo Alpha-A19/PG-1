@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+    .contTxtCart {
+        display: flex;
+        flex-direction: column;
+        padding: 20vh 0 20vh 10vw;
+    }
+    .contTxtCart > div {
+        width: 8rem;
+        border: 3px solid #666666;
+    }
+    .contTxtCart > h2 {
+        font-size: 60px;
+        font-weight: bold;
+        line-height: 74px;
+        color: #ffffff;
+        margin: 0px 0px 0px 0px;
+    }
+    .sks {
+        position: relative !important;
+    }
+    .contMenu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10vh 10vw;
+        font-weight: bold;
+    }
+    .contMenu > div > div {
+        width: clamp(20vh, 55vh, 20vh);
+        border: 3px solid #666666;
+    }
+    .contMenu > div li {
+        font-size: 20px;
+    }
+    @media (max-width: 1065px) {
+       
+    .cards_item {
+        margin: 0vh 0vh;
+    }
+
+    .btnMenu{
+        display: block;
+        z-index: 999;
+    }
+    .btnMenu i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+        color: #fff;
+    }
+
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .max-width{
+        padding: 0 50px;
+    }
+    .contTxtCart > h2 {
+        font-size: 40px;
+    }
+    }
+</style>
+<body>
+    <nav class="navbar sks" id="home">
+        <div class="maxWidth">
+            <div class="contLogo">
+                <a href="index.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/ZDF_logo%21_Logo_2021.svg/1200px-ZDF_logo%21_Logo_2021.svg.png" alt="">
+                </a>
+            </div>
+            <ul class="menu" id="myTopnav">
+                <li><a href="index.html" class="btnMenu">Inicio</a></li>
+                <li><a href="cart.html" class="btnMenu">Carta</a></li>
+                <li><a href="about.html" class="btnMenu">Sobre nosotros</a></li>
+                <li><a href="contacto.html" class="btnMenu">Contáctanos</a></li>
+                <li><a href="galeria.html" class="btnMenu">Galería</a></li>
+            </ul>
+            <div class="btnMenu">
+              <i class="fas fa-bars"></i>
+          </div>
+        </div>
+    </nav class="navbar">
+
+    <main>
+        <section class="contCart">
+            <div class="contTxtCart">
+                <div></div>
+                <h2>NUESTRA CARTA</h2>
+            </div>
+        </section>
+
+        <section class="contAbout" id="about">
+            <div class="max-width">
+                <div class="contentAbout">
+                    <h1 class="titleAbout weight">DISFRUTA DE NUESTRAS PREPARACIONES</h1>
+                    <h2>PARA TODOS LOS GUSTOS</h2>
+                    <div class="contMenu">
+                        <div>
+                            <h2>Menú</h2>
+                            <div></div>
+                            <ul>
+                                <li>(Disponible)</li>
+                                <li>(Disponible)</li>
+                                <li>(Disponible)</li>
+                                <li>(Disponible)</li>
+                                <li>(Disponible)</li>
+                                <li>(Disponible)</li>
+                            </ul>
+                            <h2>Bebidas</h2>
+                            <div></div>
+                            <ul>
+                                <li>(Disponible)</li> 
+                                <li>(Disponible)</li> 
+                                <li>(Disponible)</li> 
+                                <li>(Disponible)</li> 
+                                <li>(Disponible)</li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </section>
+
+           <section class="contInfo">
+            <div class="max-width">
+              <div>
+                <h1>Síguenos</h1>
+                <h5>No olvides que siempre puedes contactarnos a través de nuestros teléfonos, correos y redes sociales.</h5>
+                <div class="contSocial">
+                  <i class='fab fa-facebook' style='font-size:36px'></i>
+                  <i class="fab fa-instagram" style="font-size:36px"></i>
+                </div>
+              </div>
+              <div>
+                <h1>Horarios De Atención</h1>
+                  <h5><strong>Lorem ipsum dolor: </strong>  Domingo a Jueves de 10:00 a 21:00 / Viernes y Sábado 10:00 a 22:00 hrs</h5>
+              </div>
+              <div>
+                <h1>Contacto</h1>
+                <h5>0800 0000 000</h5>
+                <h5>ejemplo@email.com</h5>
+              </div>
+            </div>
+           </section>
+
+           <footer>
+            <div></div>
+            <div>
+                <span>Dev</span>
+                <span>Alpha</span>
+            </div>
+            <div></div>
+        </footer>
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+</html>
+
