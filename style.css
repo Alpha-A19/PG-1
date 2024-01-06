@@ -514,11 +514,14 @@ footer > div span:last-child{
         height: auto;
         width: 75%;
     }
+    .contTitle {
+        text-align: center;
+    }
     .contCart .serv-content .card{
         width: 100%;
     }
     .contentLoc > h1 {
-        font-size: 6vh;
+        font-size: 7vh;
     }
     .opp > div:nth-child(1){
         flex-direction: column;
